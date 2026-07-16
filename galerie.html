@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerie — La Braise &amp; l'Écume, Rennes</title>
+  <meta name="description" content="La salle, le feu, les assiettes : la galerie photo de La Braise & l'Écume, bistrot terre & mer à Rennes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">B&amp;É</span>
+        <span class="logo-text">
+          <span class="logo-name">La Braise &amp; l'Écume</span>
+          <span class="logo-tag">Bistrot terre &amp; mer — Rennes</span>
+        </span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Accueil</a>
+        <a href="carte.html">La Carte</a>
+        <a href="histoire.html">Notre Histoire</a>
+        <a href="galerie.html" class="active">Galerie</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html#reservation" class="btn">Réserver</a>
+      </nav>
+      <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <section class="page-hero ph-galerie">
+    <div>
+      <span class="kicker">En images</span>
+      <h1>Galerie</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">L'ambiance</span>
+        <h2>Le feu, la salle, les assiettes</h2>
+        <hr class="sep">
+        <p>Un aperçu de ce qui vous attend rue Saint-Georges.</p>
+      </div>
+
+      <div class="galerie-grid reveal">
+        <a href="images/braise.jpg" data-legende="La braise de chêne breton, cœur de la maison" class="wide">
+          <img src="images/braise.jpg" alt="Flammes dans la cheminée du restaurant" loading="lazy">
+        </a>
+        <a href="images/huitres.jpg" data-legende="Huîtres de Cancale, servies sur glace">
+          <img src="images/huitres.jpg" alt="Huîtres creuses de Cancale sur glace au citron" loading="lazy">
+        </a>
+        <a href="images/dressage.jpg" data-legende="Le dressage, au passe de la cuisine ouverte">
+          <img src="images/dressage.jpg" alt="Chef dressant une assiette de poisson" loading="lazy">
+        </a>
+        <a href="images/salle.jpg" data-legende="La salle, bois sombre et lumière douce" class="wide">
+          <img src="images/salle.jpg" alt="Salle du restaurant, tables en bois et banquettes" loading="lazy">
+        </a>
+        <a href="images/cuisine.jpg" data-legende="Langoustines à la braise, beurre d'algues">
+          <img src="images/cuisine.jpg" alt="Assiette de langoustines grillées" loading="lazy">
+        </a>
+        <a href="images/viande.jpg" data-legende="Côte de cochon fermier braisée au foin">
+          <img src="images/viande.jpg" alt="Pièce de viande braisée sur planche" loading="lazy">
+        </a>
+        <a href="images/dessert.jpg" data-legende="Chocolat grand cru, caramel au beurre salé">
+          <img src="images/dessert.jpg" alt="Dessert chocolat glace et caramel coulant" loading="lazy">
+        </a>
+        <a href="images/grillades.jpg" data-legende="Le retour du feu : grillades du dimanche des équipes">
+          <img src="images/grillades.jpg" alt="Plateau de grillades variées" loading="lazy">
+        </a>
+        <a href="images/terrasse.jpg" data-legende="La cour intérieure, 16 couverts aux beaux jours">
+          <img src="images/terrasse.jpg" alt="Terrasse végétalisée avec banquettes" loading="lazy">
+        </a>
+        <a href="images/marche.jpg" data-legende="Samedi matin, marché des Lices">
+          <img src="images/marche.jpg" alt="Étal de légumes au marché" loading="lazy">
+        </a>
+        <a href="images/toast.jpg" data-legende="Santé ! Les vins nature de Louane">
+          <img src="images/toast.jpg" alt="Verres de vin rouge trinquant" loading="lazy">
+        </a>
+        <a href="images/hero.jpg" data-legende="Le lieu jaune de ligne, servi à table" class="wide">
+          <img src="images/hero.jpg" alt="Table dressée avec plat de poisson et verres de vin" loading="lazy">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="lightbox" role="dialog" aria-label="Photo agrandie">
+    <button class="lightbox-close" aria-label="Fermer">×</button>
+    <figure>
+      <img src="" alt="Photo agrandie">
+      <figcaption class="lightbox-legende"></figcaption>
+    </figure>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>La Braise &amp; l'Écume</h4>
+          <p>Bistrot terre &amp; mer au feu de bois, au cœur du centre historique de Rennes.</p>
+          <p class="footer-devise">« La mer au feu. »</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="carte.html">La Carte</a></li>
+            <li><a href="histoire.html">Notre Histoire</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="contact.html">Contact &amp; Réservation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>27 rue Saint-Georges, 35000 Rennes</li>
+            <li><a href="tel:0261911345">02 61 91 13 45</a></li>
+            <li><a href="mailto:bonjour@braise-ecume.fr">bonjour@braise-ecume.fr</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Horaires</h4>
+          <ul>
+            <li>Mar – Ven : 12h–14h · 19h–22h</li>
+            <li>Samedi : 12h–14h30 · 19h–22h30</li>
+            <li>Dim &amp; Lun : fermé</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 La Braise &amp; l'Écume — Site de démonstration, établissement fictif.</span>
+        <span>Site réalisé avec soin 🔥</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
