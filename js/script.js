@@ -37,52 +37,10 @@ const observer = new IntersectionObserver(
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 // ----------------------------------------------------------
-// Hero vidéo : lecture pilotée par le scroll (scrollytelling)
+// Hero vidéo : boucle d'ambiance (pause si animations réduites)
 // ----------------------------------------------------------
-const scrubSection = document.querySelector('.hero-scrub');
-const scrubVideo = document.querySelector('.hero-scrub video');
-if (scrubSection && scrubVideo && !reduceMotion) {
-  let targetProgress = 0;
-  let currentTime = 0;
-  let duration = 0;
-
-  scrubVideo.addEventListener('loadedmetadata', () => { duration = scrubVideo.duration; });
-  // Force le chargement complet pour un scrub fluide
-  scrubVideo.load();
-
-  const readProgress = () => {
-    const rect = scrubSection.getBoundingClientRect();
-    const total = rect.height - window.innerHeight;
-    targetProgress = Math.min(1, Math.max(0, -rect.top / total));
-  };
-  readProgress();
-  window.addEventListener('scroll', readProgress, { passive: true });
-  window.addEventListener('resize', readProgress);
-
-  const content = scrubSection.querySelector('.hero-content');
-  const scrollHint = scrubSection.querySelector('.hero-scroll');
-
-  (function tick() {
-    if (duration) {
-      // Interpolation douce vers la position cible
-      const targetTime = targetProgress * (duration - 0.05);
-      currentTime += (targetTime - currentTime) * 0.12;
-      if (Math.abs(scrubVideo.currentTime - currentTime) > 0.01) {
-        scrubVideo.currentTime = currentTime;
-      }
-    }
-    // Le titre s'estompe en fin de séquence, l'indice de scroll dès le début
-    if (content) {
-      const fade = Math.min(1, Math.max(0, (targetProgress - 0.55) / 0.35));
-      content.style.opacity = String(1 - fade);
-      content.style.transform = `translateY(${fade * -34}px)`;
-    }
-    if (scrollHint) scrollHint.style.opacity = String(1 - Math.min(1, targetProgress * 6));
-    requestAnimationFrame(tick);
-  })();
-} else if (scrubVideo && reduceMotion) {
-  scrubVideo.removeAttribute('autoplay');
-}
+const heroVideo = document.querySelector('.hero-scrub video');
+if (heroVideo && reduceMotion) heroVideo.pause();
 
 // ----------------------------------------------------------
 // Braises flottantes (canvas) — hero & bandeaux
