@@ -34,18 +34,22 @@
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content">
-      <p class="hero-kicker">Bistrot terre &amp; mer — Rennes</p>
-      <h1>La Braise <em>&amp;</em> l'Écume</h1>
-      <p class="hero-sub">« La mer au feu. »</p>
-      <div class="hero-actions">
-        <a href="contact.html#reservation" class="btn">Réserver une table</a>
-        <a href="carte.html" class="btn ghost">Découvrir la carte</a>
+  <!-- HERO VIDÉO — la braise se ravive au fil du scroll -->
+  <section class="hero-scrub">
+    <div class="hero-sticky" data-embers>
+      <video src="videos/hero-braise.mp4" poster="images/hero.jpg" muted playsinline preload="auto" aria-hidden="true"></video>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-kicker">Bistrot terre &amp; mer — Rennes</p>
+        <h1>La Braise <em>&amp;</em> l'Écume</h1>
+        <p class="hero-sub">« La mer au feu. »</p>
+        <div class="hero-actions">
+          <a href="contact.html#reservation" class="btn">Réserver une table</a>
+          <a href="carte.html" class="btn ghost">Découvrir la carte</a>
+        </div>
       </div>
+      <span class="hero-scroll">Faites défiler<span class="chev">⌄</span></span>
     </div>
-    <a href="#concept" class="hero-scroll" aria-label="Défiler">⌄</a>
   </section>
 
   <!-- CONCEPT -->
@@ -56,7 +60,7 @@
       </div>
       <div class="split-txt reveal">
         <span class="kicker">Le concept</span>
-        <h2>Le feu de bois rencontre la mer bretonne</h2>
+        <h2>Le feu de bois rencontre <em>la mer bretonne</em></h2>
         <p>Au cœur de la rue Saint-Georges, notre cheminée ouverte crépite midi et soir.
         Poissons de ligne de la criée de Saint-Malo, légumes de producteurs d'Ille-et-Vilaine,
         viandes fermières : tout passe par la braise de chêne breton.</p>
@@ -67,6 +71,10 @@
       </div>
     </div>
   </section>
+
+  <div class="wave-sep" aria-hidden="true" style="background:#ffffff">
+    <svg viewBox="0 0 1440 44" preserveAspectRatio="none"><path fill="#f5efe6" d="M0,0 L1440,0 L1440,12 C1180,42 920,2 720,18 C520,34 260,8 0,28 Z"/></svg>
+  </div>
 
   <!-- SUGGESTIONS -->
   <section class="section white">
@@ -107,7 +115,7 @@
   </section>
 
   <!-- BANDEAU DEVISE -->
-  <section class="bandeau">
+  <section class="bandeau" data-embers>
     <div>
       <blockquote>« Cuisiner le produit breton comme sur les grèves&nbsp;:<br>au feu, simplement. »</blockquote>
       <cite>Maël Kerhoas — Chef &amp; co-fondateur</cite>
@@ -144,6 +152,10 @@
       </div>
     </div>
   </section>
+
+  <div class="wave-sep" aria-hidden="true" style="background:#f5efe6">
+    <svg viewBox="0 0 1440 44" preserveAspectRatio="none"><path fill="#12283a" d="M0,0 L1440,0 L1440,12 C1180,42 920,2 720,18 C520,34 260,8 0,28 Z"/></svg>
+  </div>
 
   <!-- INFOS PRATIQUES -->
   <section class="section">
