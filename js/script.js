@@ -37,10 +37,9 @@ const observer = new IntersectionObserver(
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 // ----------------------------------------------------------
-// Hero vidéo : boucle d'ambiance (pause si animations réduites)
+// Vidéos d'ambiance : pause si l'utilisateur réduit les animations
 // ----------------------------------------------------------
-const heroVideo = document.querySelector('.hero-scrub video');
-if (heroVideo && reduceMotion) heroVideo.pause();
+if (reduceMotion) document.querySelectorAll('video[autoplay]').forEach(v => v.pause());
 
 // ----------------------------------------------------------
 // Braises flottantes (canvas) — hero & bandeaux
